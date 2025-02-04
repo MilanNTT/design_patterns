@@ -1,0 +1,20 @@
+CLASS z_jsonmessage_fm DEFINITION
+  PUBLIC
+  INHERITING FROM z_message_fm
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+    METHODS: getcontent REDEFINITION.
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS z_jsonmessage_fm IMPLEMENTATION.
+  METHOD getcontent.
+    RETURN '|{"JSON":[]}|'.
+  ENDMETHOD.
+
+ENDCLASS.
